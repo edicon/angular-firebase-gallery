@@ -1,5 +1,7 @@
 import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { ImageService } from '../image/shared/image.service';
+import { Observable } from 'rxjs/Observable';
+import { GalleryImage } from '../models/galleryImage.model';
 
 @Component({
   selector: 'app-gallery',
@@ -8,16 +10,11 @@ import { ImageService } from '../image/shared/image.service';
 })
 
 export class GalleryComponent implements OnChanges {
-  images:any[];
-  filterBy?: string = 'all'
-  visibleImages:any[] = [];
+  images: Observable<GalleryImage[]>;
 
   constructor(private imageService: ImageService) {
-    console.log(this.filterBy)
-    this.visibleImages = this.imageService.getImages();
   }
 
   ngOnChanges() {
-    this.visibleImages = this.imageService.getImages();
   }
 }

@@ -11,7 +11,7 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { ImageComponent } from './image/image.component';
 import { ImageDetailComponent } from './image/image-detail.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { appRoutes } from '../routes'
+import { appRoutes } from '../routes';
 
 @NgModule({
   declarations: [
@@ -19,8 +19,7 @@ import { appRoutes } from '../routes'
     GalleryComponent,
     ImageComponent,
     NavbarComponent,
-      ImageDetailComponent,
-      ImageFilterPipe
+    ImageDetailComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,7 +27,7 @@ import { appRoutes } from '../routes'
     HttpModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [ImageService, ImageFilterPipe],
+  providers: [ImageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
