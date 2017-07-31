@@ -23,5 +23,4 @@ export class NavbarComponent implements OnInit {
     this.authService.logOut()
       .then(onResolve => this.route.navigate(['/']));
   }
-
 }

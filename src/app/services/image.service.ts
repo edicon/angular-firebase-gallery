@@ -25,7 +25,7 @@ export class ImageService {
     }
 
     getImage(key: string) {
-        const imageUrl = firebase.database()
+        return firebase.database()
         .ref('uploads/' + key)
         .once('value')
         .then((snap) => snap.val());
