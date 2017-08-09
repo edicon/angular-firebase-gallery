@@ -6,7 +6,6 @@
 export const environment = {
   production: false,
   firebase_config: {
-    apiKey: "AIzaSyAf4zow_dbI3KRdNFhwSozrKWFslvip7Ks",
     authDomain: "mglish-service.firebaseapp.com",
     databaseURL: "https://mglish-service.firebaseio.com",
     projectId: "mglish-service",
