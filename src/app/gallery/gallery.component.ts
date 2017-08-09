@@ -10,12 +10,16 @@ import { GalleryImage } from '../models/galleryImage.model';
 })
 
 export class GalleryComponent implements OnChanges {
-  images: Observable<GalleryImage[]>;
+
+  visibleImages: Observable<GalleryImage[]>;
+  filterBy?: string = 'all';
+  // visibleImages: any[] = [];
 
   constructor(private imageService: ImageService) {
-    this.images = this.imageService.getImages();
+    this.visibleImages = this.imageService.getImages();
   }
 
   ngOnChanges() {
+    this.visibleImages = this.imageService.getImages();
   }
 }
